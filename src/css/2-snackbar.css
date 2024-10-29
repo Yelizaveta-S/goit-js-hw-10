@@ -1,0 +1,147 @@
+:root {
+  --font-family: 'Montserrat', sans-serif;
+}
+
+.form {
+  margin: 0;
+  width: 360px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.form:first-child {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.form label input[type='number'] {
+  outline: none;
+  background-color: inherit;
+  box-sizing: border-box;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  width: 360px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  display: flex;
+  padding: 8px 16px;
+  height: 40px;
+  margin-top: 8px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+.form label input[type='number']:hover {
+  border-color: #000000;
+}
+.form label input[type='number']:focus {
+  border-color: #4e75ff;
+}
+
+.form fieldset {
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  height: 64px;
+  min-width: auto;
+  min-height: auto;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  align-items: center;
+  justify-content: center;
+  column-gap: 54px;
+}
+
+.form fieldset legend {
+  padding: 0 4px;
+  margin-left: 24px;
+  line-height: 14px;
+}
+
+.form fieldset label {
+  display: flex;
+}
+
+.custom-radio {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 2px 14px 0 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid #757575;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.custom-radio::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.form fieldset label input[type='radio'] {
+  display: none;
+}
+
+.form fieldset input[type='radio']:checked + .custom-radio::before {
+  background-color: #4e75ff;
+}
+
+.form fieldset input[type='radio']:checked + .custom-radio {
+  border-color: #4e75ff;
+}
+
+.form button {
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #4e75ff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-top: 16px;
+  width: 360px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:focus {
+  background: #6c8cff;
+}
